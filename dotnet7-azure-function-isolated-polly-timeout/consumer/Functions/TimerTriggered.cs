@@ -10,8 +10,7 @@ namespace consumer.Functions
         private readonly IConfiguration _configuration;
         private readonly DelayHttpClient _httpClient;
 
-        public TimerTriggered(IHttpClientFactory httpClientFactory,
-            IConfiguration configuration, DelayHttpClient httpClient)
+        public TimerTriggered(IConfiguration configuration, DelayHttpClient httpClient)
         {
             _configuration = configuration;
             _httpClient = httpClient;

@@ -18,7 +18,7 @@ var host = new HostBuilder()
     .ConfigureServices((services) =>
     {
         var timeoutPolicy = Policy
-            .TimeoutAsync<HttpResponseMessage>(30, onTimeoutAsync: (_, timeSpan, _) =>
+            .TimeoutAsync<HttpResponseMessage>(10, onTimeoutAsync: (_, timeSpan, _) =>
             {
                 Console.Out.WriteLine($"### Timeout after {timeSpan.Seconds} seconds");
 
